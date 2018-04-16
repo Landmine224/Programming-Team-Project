@@ -8,6 +8,10 @@ namespace Team_Project_Maze
 {
     class Program
     {
+        static void StartMenu()
+        {
+
+        }
         static void Main(string[] args)
         {
         }
