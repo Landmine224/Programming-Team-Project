@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Console;
 
 namespace Team_Project_Maze
 {
@@ -10,10 +11,18 @@ namespace Team_Project_Maze
     {
         static void StartMenu()
         {
-
+            string character = "·";
+            WriteLine("┌───┐       ┌─────┐");
+            WriteLine($"│ {character} │       │     │");
+            WriteLine($"│ {character} │       ├─────┤");
+            WriteLine($"│ {character} └───┐   │     │");
+            WriteLine($"│ {character} {character} {character} │   │     │");
+            WriteLine("└───────┘   └     └");
         }
         static void Main(string[] args)
         {
+            
+            ReadKey();
         }
     }
 }
