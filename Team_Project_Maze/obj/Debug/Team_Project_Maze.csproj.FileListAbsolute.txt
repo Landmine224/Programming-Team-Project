@@ -1,0 +1,7 @@
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.csprojResolveAssemblyReference.cache
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.csproj.CoreCompileInputs.cache
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe.config
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\bin\Debug\Team_Project_Maze.pdb
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.exe
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.pdb
