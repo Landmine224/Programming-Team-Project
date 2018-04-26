@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe.config
 C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe
 C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze\bin\Debug\Team_Project_Maze.pdb
@@ -5,3 +6,12 @@ C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze
 C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze\obj\Debug\Team_Project_Maze.csproj.CoreCompileInputs.cache
 C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze\obj\Debug\Team_Project_Maze.exe
 C:\Users\smithnoa003\Desktop\projects\Programming-Team-Project\Team_Project_Maze\obj\Debug\Team_Project_Maze.pdb
+=======
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.csprojResolveAssemblyReference.cache
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.csproj.CoreCompileInputs.cache
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe.config
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\bin\Debug\Team_Project_Maze.pdb
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.exe
+C:\Users\tolmalan000\Documents\Visual Studio 2017\Projects\Team_Project_Maze\Team_Project_Maze\obj\Debug\Team_Project_Maze.pdb
+>>>>>>> d18f9c51e928dc02e95303925ef658ab89474884

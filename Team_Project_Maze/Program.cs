@@ -11,17 +11,11 @@ namespace Team_Project_Maze
     {
         static void StartMenu()
         {
-            string character = "·";
-            WriteLine("┌───┐       ┌─────┐");
-            WriteLine($"│ {character} │       │     │");
-            WriteLine($"│ {character} │       ├─────┤");
-            WriteLine($"│ {character} └───┐   │     │");
-            WriteLine($"│ {character} {character} {character} │   │     │");
-            WriteLine("└───────┘   └     └");
+            WriteLine("┌┐");
         }
         static void Main(string[] args)
         {
-            
+            StartMenu();
             ReadKey();
         }
     }
