@@ -11,7 +11,10 @@ namespace Team_Project_Maze
     {
         static void StartMenu()
         {
-            WriteLine("┌┐");
+            WriteLine("┌─┐");
+            WriteLine("│ │");
+            WriteLine("│ │");
+            Clear();
         }
         static void Main(string[] args)
         {
