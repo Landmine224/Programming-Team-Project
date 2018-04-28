@@ -12,3 +12,10 @@ C:\Users\Landon Tolman\source\repos\Team Programming Project\Team_Project_Maze\o
 C:\Users\Landon Tolman\source\repos\Team Programming Project\Team_Project_Maze\obj\Debug\Team_Project_Maze.csproj.CoreCompileInputs.cache
 C:\Users\Landon Tolman\source\repos\Team Programming Project\Team_Project_Maze\obj\Debug\Team_Project_Maze.exe
 C:\Users\Landon Tolman\source\repos\Team Programming Project\Team_Project_Maze\obj\Debug\Team_Project_Maze.pdb
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\obj\Debug\Team_Project_Maze.csprojResolveAssemblyReference.cache
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\obj\Debug\Team_Project_Maze.csproj.CoreCompileInputs.cache
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\obj\Debug\Team_Project_Maze.exe
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\obj\Debug\Team_Project_Maze.pdb
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe.config
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\bin\Debug\Team_Project_Maze.exe
+C:\Users\Landon Tolman\Desktop\TPP\Team_Project_Maze\bin\Debug\Team_Project_Maze.pdb
