@@ -11,14 +11,21 @@ namespace Team_Project_Maze
     {
         static void StartMenu()
         {
-            WriteLine("┌─┐");
-            WriteLine("│ │");
-            WriteLine("│ │");
         }
         static void Main(string[] args)
         {
             Maze a = new Maze(10, 10);
-            WriteLine(a.mazeArea[0, 0]);
+            Random rnd = new Random();
+
+            for (int i = 0; i < a.height; i++)
+            {
+                for(int j = 0; j < a.width; j++)
+                {
+                    int test = rnd.Next(0, 3);
+                    a.mazeArea[j, i] = test;
+                }
+            }
+            a.drawMaze();
             StartMenu();
             ReadKey();
         }
