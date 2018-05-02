@@ -7,6 +7,7 @@ using static System.Console;
 
 namespace Team_Project_Maze
 {
+    public enum Walls{space, horizontal, leftUp, rightUp, leftDown, rightDown, vetical}
     class Program
     {
         static void StartMenu()

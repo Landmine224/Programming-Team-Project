@@ -18,7 +18,7 @@ namespace Team_Project_Maze
             this.width = 5 * width;
             this.height = height;
             mazeArea = new int[this.width, this.height];
-        }
+        }   
 
         public void drawMaze()
         {
@@ -52,6 +52,10 @@ namespace Team_Project_Maze
                     }
                 WriteLine("");
             }
+        }
+        public void Tutorial()
+        {
+            mazeArea = new int[50, 10];
         }
     }
 }
