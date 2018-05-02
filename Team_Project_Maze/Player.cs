@@ -10,7 +10,35 @@ namespace Team_Project_Maze
     {
         int x;
         int y;
+        public Player(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
+        }
 
-       
+        public int Movement(int direction)
+        {
+           char move = Console.ReadKey().KeyChar;
+            if (move == 'a')
+            {
+                return x--;
+            }
+            else if (move == 's')
+            {
+                return y--;
+            }
+            else if (move == 'd')
+            {
+                return x++;
+            }
+            else if (move == 'w')
+            {
+                return y++;
+            }
+            else
+            {
+                return x;
+            }
+        }
     }
 }
