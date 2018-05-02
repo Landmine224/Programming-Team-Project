@@ -8,5 +8,9 @@ namespace Team_Project_Maze
 {
     class Player
     {
+        int x;
+        int y;
+
+       
     }
 }
