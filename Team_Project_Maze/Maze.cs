@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
+using static Team_Project_Maze.Walls;
 
 namespace Team_Project_Maze
 {
@@ -11,13 +12,13 @@ namespace Team_Project_Maze
     {
         public int width;
         public int height;
-        public int[,] mazeArea = { };
+        public Walls[,] mazeArea = { };
 
         public Maze(int width, int height)
         {
             this.width = 5 * width;
             this.height = height;
-            mazeArea = new int[this.width, this.height];
+            mazeArea = new Walls[this.width, this.height];
         }   
 
         public void drawMaze()
@@ -27,25 +28,25 @@ namespace Team_Project_Maze
                 for (int j = 0; j < width; j++)
                     switch (mazeArea[j, i])
                     {
-                        case 0:
+                        case space:
                             Write(" ");
                             break;
-                        case 1:
+                        case horizontal:
                             Write("─");
                             break;
-                        case 2:
+                        case leftUp:
                             Write("┌");
                             break;
-                        case 3:
+                        case rightUp:
                             Write("┐");
                             break;
-                        case 4:
+                        case leftDown:
                             Write("└");
                             break;
-                        case 5:
+                        case rightDown:
                             Write("┘");
                             break;
-                        case 6:
+                        case vertical:
                             Write("│");
                             break;
 
@@ -55,7 +56,11 @@ namespace Team_Project_Maze
         }
         public void Tutorial()
         {
-            mazeArea = new int[50, 10];
+            mazeArea = new Walls[50, 10];
+            for(int i = 0; i < height; i++)
+            {
+                for()
+            }
         }
     }
 }
