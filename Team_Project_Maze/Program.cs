@@ -27,7 +27,7 @@ namespace Team_Project_Maze
             //        a.mazeArea[j, i] = test;
             //    }
             //}
-            a.Tutorial();
+            a.Practice();
             a.drawMaze();
             StartMenu();
             ReadKey();
