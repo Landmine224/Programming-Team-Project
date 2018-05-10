@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
+using static Team_Project_Maze.Walls;
 
 namespace Team_Project_Maze
 {
-    public enum Walls{space, horizontal, leftUp, rightUp, leftDown, rightDown, vetical}
+    public enum Walls { space, horizontal, leftUp, rightUp, leftDown, rightDown, vertical, character }
     class Program
     {
         static void StartMenu()
@@ -15,9 +16,6 @@ namespace Team_Project_Maze
         }
         static void Main(string[] args)
         {
-            //Maze a = new Maze(10, 10);
-            //Random rnd = new Random();
-
             //for (int i = 0; i < a.height; i++)
             //{
             //    for(int j = 0; j < a.width; j++)
@@ -26,9 +24,9 @@ namespace Team_Project_Maze
             //        a.mazeArea[j, i] = test;
             //    }
             //}
-            //a.drawMaze();
-            //StartMenu();
-
+            a.Practice();
+            a.drawMaze();
+            StartMenu();
             ReadKey();
 
         }
