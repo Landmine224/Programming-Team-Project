@@ -8,6 +8,8 @@ namespace Team_Project_Maze
 {
     class Player
     {
+        char character = '웃';
+        char death = '☠';
         int x;
         int y;
         public Player(int x, int y)
@@ -39,6 +41,7 @@ namespace Team_Project_Maze
             {
                 return x;
             }
+            
         }
     }
 }

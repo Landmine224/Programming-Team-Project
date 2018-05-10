@@ -15,17 +15,17 @@ namespace Team_Project_Maze
 
         public Maze(int width, int height)
         {
-            this.width = width;
+            this.width = 5 * width;
             this.height = height;
-            mazeArea = new int[5 * this.width, this.height];
-        }
+            mazeArea = new int[this.width, this.height];
+        }   
 
         public void drawMaze()
         {
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < width; j++)
-                    switch (mazeArea[i, j])
+                    switch (mazeArea[j, i])
                     {
                         case 0:
                             Write(" ");
@@ -50,7 +50,12 @@ namespace Team_Project_Maze
                             break;
 
                     }
+                WriteLine("");
             }
+        }
+        public void Tutorial()
+        {
+            mazeArea = new int[50, 10];
         }
     }
 }
