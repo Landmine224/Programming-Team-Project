@@ -8,7 +8,7 @@ using static Team_Project_Maze.Walls;
 
 namespace Team_Project_Maze
 {
-    public enum Walls { space, horizontal, leftUp, rightUp, leftDown, rightDown, vertical }
+    public enum Walls { space, horizontal, leftUp, rightUp, leftDown, rightDown, vertical, character }
     class Program
     {
         static void StartMenu()

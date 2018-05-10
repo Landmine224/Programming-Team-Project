@@ -10,22 +10,22 @@ namespace Team_Project_Maze
 {
     class Maze
     {
-        public int width;
+        public int length;
         public int height;
         public Walls[,] mazeArea = { };
 
         public Maze(int width, int height)
         {
-            this.width = 5 * width;
+            this.length = 5 * width;
             this.height = height;
-            mazeArea = new Walls[this.width, this.height];
+            mazeArea = new Walls[this.length, this.height];
         }
 
         public void drawMaze()
         {
             for (int i = 0; i < height; i++)
             {
-                for (int j = 0; j < width; j++)
+                for (int j = 0; j < length; j++)
                     switch (mazeArea[j, i])
                     {
                         case space:
@@ -49,6 +49,9 @@ namespace Team_Project_Maze
                         case vertical:
                             Write("│");
                             break;
+                        case character:
+                            Write("");
+                            break;
 
                     }
                 WriteLine("");
@@ -59,19 +62,19 @@ namespace Team_Project_Maze
             mazeArea = new Walls[50, 10];
             for (int i = 0; i < height; i++)
             {
-                for (int j = 0; j < width; j++)
+                for (int j = 0; j < length; j++)
                 {
                     if (j == 0 && i == 0)
                     {
                         mazeArea[0, 0] = leftUp;
                     }
-                    else if (j == width - 1 && i == 0)
+                    else if (j == length - 1 && i == 0)
                     {
-                        mazeArea[(width - 1), 0] = rightUp;
+                        mazeArea[(length - 1), 0] = rightUp;
                     }
-                    else if (j == width - 1 && i == height - 1)
+                    else if (j == length - 1 && i == height - 1)
                     {
-                        mazeArea[width - 1, height - 1] = rightDown;
+                        mazeArea[length - 1, height - 1] = rightDown;
                     }
                     else if (j == 0 && i == height - 1)
                     {
@@ -86,19 +89,35 @@ namespace Team_Project_Maze
             mazeArea = new Walls[50, 10];
             for (int i = 0; i < height; i++)
             {
-                for (int j = 0; j < width; j++)
+                for (int j = 0; j < length; j++)
                 {
+                    if (i == 0)
+                    {
+                        mazeArea[j, i] = horizontal;
+                    }
+                    else if (j == 0)
+                    {
+                        mazeArea[j, i] = vertical;
+                    }
+                    else if (j == length - 1)
+                    {
+                        mazeArea[j, i] = vertical;
+                    }
+                    else if (i == height - 1)
+                    {
+                        mazeArea[j, i] = horizontal;
+                    }
                     if (j == 0 && i == 0)
                     {
                         mazeArea[0, 0] = leftUp;
                     }
-                    else if (j == width - 1 && i == 0)
+                    else if (j == length - 1 && i == 0)
                     {
-                        mazeArea[(width - 1), 0] = rightUp;
+                        mazeArea[(length - 1), 0] = rightUp;
                     }
-                    else if (j == width - 1 && i == height - 1)
+                    else if (j == length - 1 && i == height - 1)
                     {
-                        mazeArea[width - 1, height - 1] = rightDown;
+                        mazeArea[length - 1, height - 1] = rightDown;
                     }
                     else if (j == 0 && i == height - 1)
                     {
