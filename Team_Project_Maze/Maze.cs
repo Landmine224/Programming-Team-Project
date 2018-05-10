@@ -52,7 +52,6 @@ namespace Team_Project_Maze
                         case character:
                             Write("");
                             break;
-
                     }
                 WriteLine("");
             }
