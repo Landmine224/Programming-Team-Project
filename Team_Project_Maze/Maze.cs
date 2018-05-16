@@ -13,6 +13,7 @@ namespace Team_Project_Maze
         public int length;
         public int height;
         public Walls[,] mazeArea = { };
+        public Player player = new Player(0, 0);
 
         public Maze(int width, int height)
         {

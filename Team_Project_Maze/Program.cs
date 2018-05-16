@@ -16,9 +16,13 @@ namespace Team_Project_Maze
         }
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Maze a = new Maze(10,10);
             Player player = new Player(0, 0);
 
+=======
+            Maze a = new Maze(10, 10);
+>>>>>>> cc6541df2674bf4030d25a6353245e8362a5b5c1
             //for (int i = 0; i < a.height; i++)
             //{
             //    for(int j = 0; j < a.width; j++)
