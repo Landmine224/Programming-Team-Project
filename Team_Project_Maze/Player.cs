@@ -20,28 +20,44 @@ namespace Team_Project_Maze
 
         public int Movement(int direction)
         {
-           char move = Console.ReadKey().KeyChar;
-            if (move == 'a')
+            char move = Console.ReadKey().KeyChar;
+            switch (move)
             {
-                return x--;
+                case 'a':
+                    return x--;
+                case 'd':
+                    return x++;
+                case 's':
+                    return y--;
+                case 'w':
+                    return y++;
+                default:
+                    return x;
             }
-            else if (move == 's')
-            {
-                return y--;
-            }
-            else if (move == 'd')
-            {
-                return x++;
-            }
-            else if (move == 'w')
-            {
-                return y++;
-            }
-            else
-            {
-                return x;
-            }
+            //{
+                
+            //    if (move == 'a')
+            //    {
+            //        return x--;
+            //    }
+            //    else if (move == 's')
+            //    {
+            //        return y--;
+            //    }
+            //    else if (move == 'd')
+            //    {
+            //        return x++;
+            //    }
+            //    else if (move == 'w')
+            //    {
+            //        return y++;
+            //    }
+            //    else
+            //    {
+            //        return x;
+            //    }
 
+            //}
         }
     }
 }

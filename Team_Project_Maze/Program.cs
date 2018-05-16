@@ -16,7 +16,9 @@ namespace Team_Project_Maze
         }
         static void Main(string[] args)
         {
-             Maze a = new Maze(10, 10);
+            Maze a = new Maze(10,10);
+            Player player = new Player(1, 1);
+            a.player = player;
             //for (int i = 0; i < a.height; i++)
             //{
             //    for(int j = 0; j < a.width; j++)
