@@ -8,10 +8,10 @@ namespace Team_Project_Maze
 {
     class Player
     {
-        char character = '웃';
-        char death = '☠';
-        int x;
-        int y;
+        public char character = '웃';
+        public char death = '☠';
+        public int x;
+        public int y;
         public Player(int x, int y)
         {
             this.x = x;

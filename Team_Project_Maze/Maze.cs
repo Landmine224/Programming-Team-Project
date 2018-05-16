@@ -24,6 +24,7 @@ namespace Team_Project_Maze
 
         public void drawMaze()
         {
+            Clear();
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < length; j++)
@@ -51,7 +52,7 @@ namespace Team_Project_Maze
                             Write("│");
                             break;
                         case character:
-                            Write("");
+                            Write(player.character);
                             break;
                     }
                 WriteLine("");
@@ -122,6 +123,10 @@ namespace Team_Project_Maze
                     else if (j == 0 && i == height - 1)
                     {
                         mazeArea[0, height - 1] = leftDown;
+                    }
+                    if (i == height - 1 && j == length - 1)
+                    {
+                        mazeArea[player.x, player.y] = character;
                     }
                 }
             }
