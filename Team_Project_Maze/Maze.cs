@@ -17,7 +17,7 @@ namespace Team_Project_Maze
 
         public Maze(int width, int height)
         {
-            this.length = 5 * width;
+            this.length = 5 * width - 1;
             this.height = height;
             mazeArea = new Walls[this.length, this.height];
         }

@@ -18,24 +18,26 @@ namespace Team_Project_Maze
             this.y = y;
         }
 
-        public int Movement(int direction)
+        public int Movement()
         {
             char move = Console.ReadKey().KeyChar;
             switch (move)
             {
                 case 'a':
-                    return x--;
+                    x = x - 2;
+                    return x;
                 case 'd':
-                    return x++;
+                    x = x + 2;
+                    return x;
                 case 's':
-                    return y--;
-                case 'w':
                     return y++;
+                case 'w':
+                    return y--;
                 default:
                     return x;
             }
             //{
-                
+
             //    if (move == 'a')
             //    {
             //        return x--;

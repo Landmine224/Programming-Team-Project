@@ -16,9 +16,8 @@ namespace Team_Project_Maze
         }
         static void Main(string[] args)
         {
-            Maze a = new Maze(10,10);
-            Player player = new Player(1, 1);
-            a.player = player;
+
+            Maze a = new Maze(10, 10);
             //for (int i = 0; i < a.height; i++)
             //{
             //    for(int j = 0; j < a.width; j++)
@@ -27,13 +26,15 @@ namespace Team_Project_Maze
             //        a.mazeArea[j, i] = test;
             //    }
             //}
-            Player test = new Player(30, 8);
-            a.player = test;
-            a.Practice();
-            a.drawMaze();
-            StartMenu();
-            ReadKey();
-
+            Player test = new Player(0, 0);
+            while (true)
+            {
+                a.player = test;
+                a.Practice();
+                a.drawMaze();
+                a.player.Movement();
+                StartMenu();
+            }
         }
     }
 }
