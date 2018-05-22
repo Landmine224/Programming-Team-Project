@@ -118,7 +118,7 @@ namespace Team_Project_Maze
         public void Practice()
         //For testing purposes only
         {
-            maze = new Walls[50, 10];
+            maze = new Walls[49, 10];
             SetLengthAndHeight();
             for (int i = 0; i < height; i++)
             {
@@ -164,9 +164,15 @@ namespace Team_Project_Maze
             }
         }
 
-        //public void SetWalls()
-        //{
-        //    for(int i = 0; i < height; )
-        //}
+        public void SetWalls()
+        {
+            for (int i = 0; i < height; i++)
+            {
+                for(int j = 0; j < length; j++)
+                {
+
+                }
+            }
+        }
     }
 }
