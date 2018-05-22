@@ -12,23 +12,22 @@ namespace Team_Project_Maze
     {
         public int length;
         public int height;
-        public Walls[,] mazeArea = { };
+        public Walls[,] maze = { };
         public Player player = new Player(0, 0);
+        public int[,] mazeSetUp = { };
 
-        public Maze(int width, int height)
+        public Maze()
         {
-            this.length = 5 * width - 1;
-            this.height = height;
-            mazeArea = new Walls[this.length, this.height];
         }
 
-        public void drawMaze()
+        public void DrawMaze()
+        //Draws the maze on the console
         {
             Clear();
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < length; j++)
-                    switch (mazeArea[j, i])
+                    switch (maze[j, i])
                     {
                         case space:
                             Write(" ");
@@ -58,78 +57,116 @@ namespace Team_Project_Maze
                 WriteLine("");
             }
         }
-        public void Tutorial()
+
+        public void SetLengthAndHeight()
+        //Gets the length and height of the maze
         {
-            mazeArea = new Walls[50, 10];
-            for (int i = 0; i < height; i++)
-            {
-                for (int j = 0; j < length; j++)
-                {
-                    if (j == 0 && i == 0)
-                    {
-                        mazeArea[0, 0] = leftUp;
-                    }
-                    else if (j == length - 1 && i == 0)
-                    {
-                        mazeArea[(length - 1), 0] = rightUp;
-                    }
-                    else if (j == length - 1 && i == height - 1)
-                    {
-                        mazeArea[length - 1, height - 1] = rightDown;
-                    }
-                    else if (j == 0 && i == height - 1)
-                    {
-                        mazeArea[0, height - 1] = leftDown;
-                    }
-                }
-            }
+            length = maze.GetLength(0);
+            height = maze.GetLength(1);
         }
 
-        public void Practice()
+
+        public void Tutorial()
+        //The tutorial for the player
         {
-            mazeArea = new Walls[50, 10];
+            maze = new Walls[50, 10];
+            SetLengthAndHeight();
             for (int i = 0; i < height; i++)
             {
                 for (int j = 0; j < length; j++)
                 {
                     if (i == 0)
                     {
-                        mazeArea[j, i] = horizontal;
+                        maze[j, i] = horizontal;
                     }
                     else if (j == 0)
                     {
-                        mazeArea[j, i] = vertical;
+                        maze[j, i] = vertical;
                     }
                     else if (j == length - 1)
                     {
-                        mazeArea[j, i] = vertical;
+                        maze[j, i] = vertical;
                     }
                     else if (i == height - 1)
                     {
-                        mazeArea[j, i] = horizontal;
+                        maze[j, i] = horizontal;
                     }
                     if (j == 0 && i == 0)
                     {
-                        mazeArea[0, 0] = leftUp;
+                        maze[0, 0] = leftUp;
                     }
                     else if (j == length - 1 && i == 0)
                     {
-                        mazeArea[(length - 1), 0] = rightUp;
+                        maze[(length - 1), 0] = rightUp;
                     }
                     else if (j == length - 1 && i == height - 1)
                     {
-                        mazeArea[length - 1, height - 1] = rightDown;
+                        maze[length - 1, height - 1] = rightDown;
                     }
                     else if (j == 0 && i == height - 1)
                     {
-                        mazeArea[0, height - 1] = leftDown;
+                        maze[0, height - 1] = leftDown;
                     }
                     if (i == height - 1 && j == length - 1)
                     {
-                        mazeArea[player.x, player.y] = character;
+                        maze[player.x, player.y] = character;
                     }
                 }
             }
         }
+
+        public void Practice()
+        //For testing purposes only
+        {
+            maze = new Walls[50, 10];
+            SetLengthAndHeight();
+            for (int i = 0; i < height; i++)
+            {
+                for (int j = 0; j < length; j++)
+                {
+                    if (i == 0)
+                    {
+                        maze[j, i] = horizontal;
+                    }
+                    else if (j == 0)
+                    {
+                        maze[j, i] = vertical;
+                    }
+                    else if (j == length - 1)
+                    {
+                        maze[j, i] = vertical;
+                    }
+                    else if (i == height - 1)
+                    {
+                        maze[j, i] = horizontal;
+                    }
+                    if (j == 0 && i == 0)
+                    {
+                        maze[0, 0] = leftUp;
+                    }
+                    else if (j == length - 1 && i == 0)
+                    {
+                        maze[(length - 1), 0] = rightUp;
+                    }
+                    else if (j == length - 1 && i == height - 1)
+                    {
+                        maze[length - 1, height - 1] = rightDown;
+                    }
+                    else if (j == 0 && i == height - 1)
+                    {
+                        maze[0, height - 1] = leftDown;
+                    }
+                    if (i == height - 1 && j == length - 1)
+                    {
+                        maze[player.x, player.y] = character;
+                    }
+                }
+            }
+        }
+
+        //public void SetWalls()
+        //{
+        //    for(int i = 0; i < height; )
+        //}
     }
 }
