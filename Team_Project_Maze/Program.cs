@@ -16,25 +16,20 @@ namespace Team_Project_Maze
         }
         static void Main(string[] args)
         {
-
+            StartMenu();
             Maze a = new Maze();
-            //for (int i = 0; i < a.height; i++)
-            //{
-            //    for(int j = 0; j < a.width; j++)
-            //    {
-            //        int test = rnd.Next(0, 3);
-            //        a.mazeArea[j, i] = test;
-            //    }
-            //}
             Player test = new Player(2, 2);
-            while (true)
+            WriteLine("Press ESC to stop");
+            do
             {
-                a.player = test;
-                a.Practice();
-                a.DrawMaze();
-                a.player.Movement();
-                StartMenu();
-            }
+                while (!KeyAvailable)
+                {
+                    a.player = test;
+                    a.Practice();
+                    a.DrawMaze();
+                    a.player.Movement();
+                }
+            } while (ReadKey(true).Key != ConsoleKey.Escape);
         }
     }
 }

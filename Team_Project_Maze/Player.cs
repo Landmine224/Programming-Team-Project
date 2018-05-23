@@ -24,21 +24,21 @@ namespace Team_Project_Maze
             previous[0] = x;
             previous[1] = y;
             char move = Console.ReadKey().KeyChar;
-            switch (move)
-            {
-                case 'a':
-                    x = x - 2;
-                    return x;
-                case 'd':
-                    x = x + 2;
-                    return x;
-                case 's':
-                    return y++;
-                case 'w':
-                    return y--;
-                default:
-                    return x;
-            }
+                switch (move)
+                {
+                    case 'a':
+                        x = x - 2;
+                        return x;
+                    case 'd':
+                        x = x + 2;
+                        return x;
+                    case 's':
+                        return y++;
+                    case 'w':
+                        return y--;
+                    default:
+                        return x;
+                }
             //{
 
             //    if (move == 'a')
