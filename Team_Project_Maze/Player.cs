@@ -12,6 +12,7 @@ namespace Team_Project_Maze
         public char death = '☠';
         public int x;
         public int y;
+        public int[] previous = new int[2];
         public Player(int x, int y)
         {
             this.x = x;
@@ -20,6 +21,8 @@ namespace Team_Project_Maze
 
         public int Movement()
         {
+            previous[0] = x;
+            previous[1] = y;
             char move = Console.ReadKey().KeyChar;
             switch (move)
             {

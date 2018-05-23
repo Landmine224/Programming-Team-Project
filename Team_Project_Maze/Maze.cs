@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
-using static Team_Project_Maze.Walls;
+using static Team_Project_Maze.Cell;
 
 namespace Team_Project_Maze
 {
@@ -12,7 +12,7 @@ namespace Team_Project_Maze
     {
         public int length;
         public int height;
-        public Walls[,] maze = { };
+        public Cell[,] maze = { };
         public Player player = new Player(0, 0);
         public int[,] mazeSetUp = { };
 
@@ -29,28 +29,28 @@ namespace Team_Project_Maze
                 for (int j = 0; j < length; j++)
                     switch (maze[j, i])
                     {
-                        case space:
+                        case SPACE:
                             Write(" ");
                             break;
-                        case horizontal:
+                        case HORIZONTAL:
                             Write("─");
                             break;
-                        case leftUp:
+                        case TOPLEFT:
                             Write("┌");
                             break;
-                        case rightUp:
+                        case TOPRIGHT:
                             Write("┐");
                             break;
-                        case leftDown:
+                        case BOTTOMLEFT:
                             Write("└");
                             break;
-                        case rightDown:
+                        case BOTTOMRIGHT:
                             Write("┘");
                             break;
-                        case vertical:
+                        case VERTICAL:
                             Write("│");
                             break;
-                        case character:
+                        case CHARACTER:
                             Write(player.character);
                             break;
                     }
@@ -69,7 +69,7 @@ namespace Team_Project_Maze
         public void Tutorial()
         //The tutorial for the player
         {
-            maze = new Walls[50, 10];
+            maze = new Cell[49, 10];
             SetLengthAndHeight();
             for (int i = 0; i < height; i++)
             {
@@ -77,39 +77,39 @@ namespace Team_Project_Maze
                 {
                     if (i == 0)
                     {
-                        maze[j, i] = horizontal;
+                        maze[j, i] = HORIZONTAL;
                     }
                     else if (j == 0)
                     {
-                        maze[j, i] = vertical;
+                        maze[j, i] = VERTICAL;
                     }
                     else if (j == length - 1)
                     {
-                        maze[j, i] = vertical;
+                        maze[j, i] = VERTICAL;
                     }
                     else if (i == height - 1)
                     {
-                        maze[j, i] = horizontal;
+                        maze[j, i] = HORIZONTAL;
                     }
                     if (j == 0 && i == 0)
                     {
-                        maze[0, 0] = leftUp;
+                        maze[0, 0] = TOPLEFT;
                     }
                     else if (j == length - 1 && i == 0)
                     {
-                        maze[(length - 1), 0] = rightUp;
+                        maze[(length - 1), 0] = TOPRIGHT;
                     }
                     else if (j == length - 1 && i == height - 1)
                     {
-                        maze[length - 1, height - 1] = rightDown;
+                        maze[length - 1, height - 1] = BOTTOMRIGHT;
                     }
                     else if (j == 0 && i == height - 1)
                     {
-                        maze[0, height - 1] = leftDown;
+                        maze[0, height - 1] = BOTTOMLEFT;
                     }
                     if (i == height - 1 && j == length - 1)
                     {
-                        maze[player.x, player.y] = character;
+                        maze[player.x, player.y] = CHARACTER;
                     }
                 }
             }
@@ -118,7 +118,7 @@ namespace Team_Project_Maze
         public void Practice()
         //For testing purposes only
         {
-            maze = new Walls[49, 10];
+            maze = new Cell[49, 10];
             SetLengthAndHeight();
             for (int i = 0; i < height; i++)
             {
@@ -126,41 +126,53 @@ namespace Team_Project_Maze
                 {
                     if (i == 0)
                     {
-                        maze[j, i] = horizontal;
+                        maze[j, i] = HORIZONTAL;
                     }
                     else if (j == 0)
                     {
-                        maze[j, i] = vertical;
+                        maze[j, i] = VERTICAL;
                     }
                     else if (j == length - 1)
                     {
-                        maze[j, i] = vertical;
+                        maze[j, i] = VERTICAL;
                     }
                     else if (i == height - 1)
                     {
-                        maze[j, i] = horizontal;
+                        maze[j, i] = HORIZONTAL;
                     }
                     if (j == 0 && i == 0)
                     {
-                        maze[0, 0] = leftUp;
+                        maze[0, 0] = TOPLEFT;
                     }
                     else if (j == length - 1 && i == 0)
                     {
-                        maze[(length - 1), 0] = rightUp;
+                        maze[(length - 1), 0] = TOPRIGHT;
                     }
                     else if (j == length - 1 && i == height - 1)
                     {
-                        maze[length - 1, height - 1] = rightDown;
+                        maze[length - 1, height - 1] = BOTTOMRIGHT;
                     }
                     else if (j == 0 && i == height - 1)
                     {
-                        maze[0, height - 1] = leftDown;
+                        maze[0, height - 1] = BOTTOMLEFT;
                     }
-                    if (i == height - 1 && j == length - 1)
-                    {
-                        maze[player.x, player.y] = character;
-                    }
+                   
                 }
+            }
+            TestIfWall();
+        }
+        public void TestIfWall()
+        {
+            Cell[] wall = new Cell[] { HORIZONTAL, TOPLEFT, TOPRIGHT, BOTTOMLEFT, BOTTOMRIGHT, VERTICAL };
+            if (wall.Contains(maze[player.x, player.y]))
+            {
+                player.x = player.previous[0];
+                player.y = player.previous[1];
+                maze[player.x, player.y] = CHARACTER;
+            }
+            else
+            {
+                maze[player.x, player.y] = CHARACTER;
             }
         }
 
@@ -168,9 +180,8 @@ namespace Team_Project_Maze
         {
             for (int i = 0; i < height; i++)
             {
-                for(int j = 0; j < length; j++)
+                for (int j = 0; j < length; j++)
                 {
-
                 }
             }
         }

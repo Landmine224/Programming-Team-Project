@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Console;
-using static Team_Project_Maze.Walls;
+using static Team_Project_Maze.Cell;
 
 namespace Team_Project_Maze
 {
-    public enum Walls { space, horizontal, leftUp, rightUp, leftDown, rightDown, vertical, character}
+    public enum Cell { SPACE, HORIZONTAL, TOPLEFT, TOPRIGHT, BOTTOMLEFT, BOTTOMRIGHT, VERTICAL, CHARACTER }
     class Program
     {
         static void StartMenu()
@@ -26,7 +26,7 @@ namespace Team_Project_Maze
             //        a.mazeArea[j, i] = test;
             //    }
             //}
-            Player test = new Player(0, 0);
+            Player test = new Player(2, 2);
             while (true)
             {
                 a.player = test;
