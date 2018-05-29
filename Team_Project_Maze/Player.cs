@@ -19,7 +19,7 @@ namespace Team_Project_Maze
             this.y = y;
         }
 
-        public int Movement()
+        public void Movement()
         {
             previous[0] = x;
             previous[1] = y;
@@ -28,16 +28,16 @@ namespace Team_Project_Maze
                 {
                     case 'a':
                         x = x - 2;
-                        return x;
+                        break;
                     case 'd':
                         x = x + 2;
-                        return x;
+                        break;
                     case 's':
-                        return y++;
+                        y++;
+                    break;
                     case 'w':
-                        return y--;
-                    default:
-                        return x;
+                        y--;
+                    break;
                 }
             //{
 
